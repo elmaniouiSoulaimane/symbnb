@@ -34,11 +34,7 @@ class HomeController extends AbstractController {
     public function home(){
         $prenoms = ["Lior" => 31, "Joseph"=> 12, "Anne"=> 55];
         return $this->render(
-            'home.html.twig',
-            [   'title' => "Bonjour tous",
-                'age' => 31,
-                'tableau' => $prenoms
-            ]
+            'home.html.twig'
         );
     }
 }

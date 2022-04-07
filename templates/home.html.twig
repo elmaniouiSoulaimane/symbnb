@@ -1,18 +1,127 @@
-
 {% extends 'base.html.twig' %}
-{% block body %}
-    <h1>{{ title }}</h1>
-    <p>comment allez vous</p>
-    <a href="{{ path('hello_base') }}">allez voir hello</a>
-    {% if age >= 18 %}
-        <p>vous etes un adulte</p>
-    {% elseif age >= 12 %}
-        <p>Vous etes un adolescent !</p>
-    {% else %}
-        <p>Vous etes un enfant</p>
-    {% endif %}
 
-    {% for prenom, age in tableau %}
-        <p>{{ prenom }} a {{ age }} ans</p>
-    {% endfor %}
+{% block title %}
+    Bienvenue sur le meilleur réseau d'appartements
+{% endblock %}
+
+{% block body %}
+
+<div class="container mb-7">
+    <div class="container">
+        <h1 class="display-3">Bienvenue sur SymBNB !</h1>
+        <p class="lead">Nous mettons en relations les voyageurs et les propriétaires qui veulent profiter d'opportunités et gagner de l'argent en prposant leur bien à la location !</p>
+        <hr class="my-4">
+        <p>Vous étes voyageur ? Et vous voulez voir ou vous pourrez loger pour votre prochain déplacement ?</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Voir nos annonces</a>
+        </p>
+    </div>
+
+    <h2>Nos appartements stars</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong>49&euro; / nuit</strong> <br>
+                    <small>Pas encore noté</small>
+                </div>
+
+                <img src="{{ asset('/assets/appartement.jpg') }}" alt="Image de l'appartement" style="height:200px; width:100%; display:block">
+
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+
+                    <p lass="card-text">
+                        lorem ipsum
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong>49&euro; / nuit</strong> <br>
+                    <small>Pas encore noté</small>
+                </div>
+
+                <img src="{{ asset('/assets/appartement.jpg') }}" alt="Image de l'appartement" style="height:200px; width:100%; display:block">
+
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+
+                    <p lass="card-text">
+                        lorem ipsum
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    3 chambres, <strong>49&euro; / nuit</strong> <br>
+                    <small>Pas encore noté</small>
+                </div>
+
+                <img src="{{ asset('/assets/appartement.jpg') }}" alt="Image de l'appartement" style="height:200px; width:100%; display:block">
+
+                <div class="card-body">
+                    <h4 class="card-title">
+                        Appartement de ouf !
+                    </h4>
+
+                    <p lass="card-text">
+                        lorem ipsum
+                    </p>
+
+                    <a href="#" class="btn btn-secondary">En savoir plus !</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2h1 class="h1 mt-3 mb-4 class">Nos propriétaires stars !</h2h1>
+
+    <div class="row">
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">Lior Chamla</h4>
+
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="Avatar de Lior Chamla" class="float-left mr-3">
+                        <p>Lorem ipsum</p>
+                        <a href="#" class="btn btn-success float-right">En savoir plus !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">Lior Chamla</h4>
+
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="Avatar de Lior Chamla" class="float-left mr-3">
+                        <p>Lorem ipsum</p>
+                        <a href="#" class="btn btn-success float-right">En savoir plus !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
