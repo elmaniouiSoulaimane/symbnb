@@ -43,6 +43,8 @@ class AdController extends AbstractController
 
         $form->handleRequest($request);
 
+
+
         if($form->isSubmitted() && $form->isValid()){
 
             //$manager = $this->getDoctrine()->getManager();
@@ -51,6 +53,16 @@ class AdController extends AbstractController
             $manager->persist($ad);
             //SEND SQL QUERY
             $manager->flush();
+
+            //Addition d'un flash
+            $this->addFlash(
+                'success',
+                "l'annonce <strong>Test</strong> a bien été enregistrée !"
+            );
+
+            return $this->redirectToRoute('ads_show', [
+                'slug' => $ad->getSlug()
+            ]);
         }
 
         return $this->render('ad/new.html.twig', [
